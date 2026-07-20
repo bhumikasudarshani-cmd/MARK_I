@@ -1,0 +1,18 @@
+# Kaggle credentials
+kaggle.json
+*.json
+
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
