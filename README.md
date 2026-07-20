@@ -16,18 +16,20 @@
 ```text
 MARK_I/
 ├── backend/
-│   ├── preprocess.py     # Centralized text cleaning and tokenization module
-│   └── train_model.py    # Leakage-free training and evaluation pipeline
-├── data/
-│   └── claims.csv        # Compiled master training dataset
+│   ├── app.py                 # Flask entry point — thin, just routes
+│   ├── inference.py           # Loads model/vectorizer once, exposes predict()
+│   ├── preprocess.py          # Already have this 
+│   ├── train_model.py         # Already have this 
+│   ├── config.py              # Env-based config (debug, port, model paths)
+│   ├── requirements.txt
+│   └── tests/
+│       └── test_api.py
 ├── models/
-│   ├── model.pkl         # Serialized Linear SVM classifier
-│   ├── vectorizer.pkl    # Fitted TF-IDF vectorizer artifact
-│   └── metrics.json      # Evaluation performance report
-├── frontend/             # Web interface components (UI)
-├── research_paper/       # Academic documentation & reports
-├── .gitignore            # Git exclusion rules
-├── build_dataset.py      # Dataset ingestion and consolidation script
-├── Drug_Alert_March2023.csv                # CDSCO regulatory safety alerts
-├── Spurious_Drugs_Puducherry_Nov2025.csv   # Counterfeit/spurious notices
-└── README.md             # Project documentation
+│   ├── model.pkl
+│   └── vectorizer.pkl
+├── data/
+│   └── claims.csv
+└── frontend/
+    ├── index.html
+    ├── app.js
+    └── style.css
