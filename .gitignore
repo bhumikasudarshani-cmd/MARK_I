@@ -16,3 +16,5 @@ __pycache__/
 
 # VS Code
 .vscode/
+*.zip
+FakeCovid_July2020.csv
